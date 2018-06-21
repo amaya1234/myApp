@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MapawebPage } from '../pages/mapaweb/mapaweb';
 import { Geolocation } from '@ionic-native/geolocation';
+import { FotoCam } from '../pages/fotocam/fotocam';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,15 @@ import { Geolocation } from '@ionic-native/geolocation';
     ContactPage,
     HomePage,
     TabsPage,
-    MapawebPage
+    MapawebPage,
+    FotoCam,
+   
   
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +39,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     ContactPage,
     HomePage,
     TabsPage,
-    MapawebPage
+    MapawebPage,
+    FotoCam,
   ],
   providers: [
     StatusBar,
